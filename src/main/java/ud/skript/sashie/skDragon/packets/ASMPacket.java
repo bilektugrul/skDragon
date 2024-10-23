@@ -41,13 +41,13 @@ public abstract class ASMPacket {
                sendPacket = MethodAccess.get((ReflectionUtils.PackageType.MINECRAFT_SERVER).getClass("PlayerConnection"));
                packet = ReflectionUtils.PackageType.MINECRAFT_SERVER.getClass("Packet");
             }else{
-               playerConnection = FieldAccess.get(ReflectionUtils.PackageType.MINECRAFT_LEVEL.getClass("ServerPlayer"));
+               playerConnection = FieldAccess.get(ReflectionUtils.PackageType.MINECRAFT_LEVEL.getClass("EntityPlayer"));
                try {
                   playerConnectionIndex = playerConnection.getIndex("c");
                } catch (Exception ignored) {
                   playerConnectionIndex = playerConnection.getIndex("connection");
                }
-               sendPacket = MethodAccess.get(ReflectionUtils.PackageType.MINECRAFT_SERVER_NETWORK.getClass("ServerPlayerConnection"));
+               sendPacket = MethodAccess.get(ReflectionUtils.PackageType.MINECRAFT_SERVER_NETWORK.getClass("PlayerConnection"));
                packet = ReflectionUtils.PackageType.MINECRAFT_NETWORK_PROTOCOL.getClass("Packet");
             }
 

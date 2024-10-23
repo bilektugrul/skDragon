@@ -295,7 +295,7 @@ public final class ReflectionUtils {
 
    public enum PackageType {
       MINECRAFT_SERVER("MINECRAFT_SERVER", 0, "net.minecraft.server"),
-      CRAFTBUKKIT("CRAFTBUKKIT", 1, "org.bukkit.craftbukkit"),
+      CRAFTBUKKIT("CRAFTBUKKIT", 1, "org.bukkit.craftbukkit." + getServerVersion()),
       CRAFTBUKKIT_BLOCK("CRAFTBUKKIT_BLOCK", 2, CRAFTBUKKIT, "block"),
       CRAFTBUKKIT_CHUNKIO("CRAFTBUKKIT_CHUNKIO", 3, CRAFTBUKKIT, "chunkio"),
       CRAFTBUKKIT_COMMAND("CRAFTBUKKIT_COMMAND", 4, CRAFTBUKKIT, "command"),

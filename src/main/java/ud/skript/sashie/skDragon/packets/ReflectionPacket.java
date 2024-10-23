@@ -35,7 +35,7 @@ public abstract class ReflectionPacket {
                playerConnection = ReflectionUtils.getField("EntityPlayer", ReflectionUtils.PackageType.MINECRAFT_SERVER, false, "playerConnection");
                packet = ReflectionUtils.PackageType.MINECRAFT_SERVER.getClass("Packet");
             }else{
-               playerConnection = ReflectionUtils.getField("ServerPlayer", ReflectionUtils.PackageType.MINECRAFT_LEVEL, false, "b");
+               playerConnection = ReflectionUtils.getField("EntityPlayer", ReflectionUtils.PackageType.MINECRAFT_LEVEL, false, "b");
                packet = ReflectionUtils.PackageType.MINECRAFT_NETWORK_PROTOCOL.getClass("Packet");
             }
 
